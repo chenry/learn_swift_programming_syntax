@@ -7,6 +7,7 @@ import Foundation
 class LightSwitch {
     
     var on: Bool = true
+    var dimmer: Double = 3.141592
 }
 
 var livingRoomSwitch = LightSwitch()
@@ -15,7 +16,8 @@ livingRoomSwitch.on
 var dollarSign: Character = "$"
 var myFirstSwiftString: String = "mo' money"
 var mySecondSwiftString: String = "mo' problems"
-var concatenatedString:String = myFirstSwiftString + ", " + mySecondSwiftString
+var concatenatedString  = myFirstSwiftString + ", " + mySecondSwiftString
+concatenatedString.dynamicType
 
 //: ### Stay tuned for more on Optionals and Tuples in the upcoming lessons!
 
