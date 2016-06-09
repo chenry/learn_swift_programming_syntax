@@ -41,6 +41,12 @@ for (food, like) in polarizingFoods {
 //: ### Exercise 4
 //: The Oakland area code is changing from 415 to 510. Replace all occurrences of the area code 415 with 510 in the dictionary below.
 var rapperPhoneNumbers = ["Azealia Banks":"(212)548-8777", "Boots Riley":"(415)755-9887", "MC Hammer":"(415)533-9899", "Missy Elliot":"(757)488-5552", "Shock G":"(415)499-7676", "Sir Mix-a-lot":"(206)123-4567", "Snoop Dogg":"(213)760-6664"]
+
+for (rapper, phoneNbr) in rapperPhoneNumbers {
+    rapperPhoneNumbers[rapper] = phoneNbr.stringByReplacingOccurrencesOfString("(415)", withString: "(510)")
+}
+
+rapperPhoneNumbers
 //: ## Switch Statements
 //: Translate the following if-else statements into switch statements. Feel free to modify print statements as desired.
 //: ### Exercise 5
@@ -50,6 +56,13 @@ enum Sport {
 }
 
 var sport = Sport.Baseball
+
+switch sport {
+case .Baseball:
+    print("Go A's!")
+default:
+    print("Go Unknown")
+}
 
 if sport == .Baseball {
     print("Go A's!")
