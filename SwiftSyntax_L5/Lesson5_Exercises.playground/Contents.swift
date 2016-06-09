@@ -8,11 +8,21 @@ import UIKit
 
 //:Test out your discovery below by returning the last letter of the String, "bologna".
 var word = "bologna"
-
+word.removeAtIndex(word.endIndex.predecessor())
 //: __Problem 2__
 //:
 //: Write a function called combineLastCharacters. It should take in an array of strings, collect the last character of each string and combine those characters to make a new string to return. Use the strategy you discovered in Problem 1 along with a for-in loop to write combineLastCharacters. Then try it on the nonsenseArray below.
 var nonsenseArray = ["bungalow", "buffalo", "indigo", "although", "Ontario", "albino", "%$&#!"]
+
+func combineLastLetters(strings: [String]) -> String {
+    var combinedString = ""
+    for var currString in strings {
+        combinedString = combinedString + "\(currString.removeAtIndex(currString.endIndex.predecessor()))"
+    }
+    return combinedString
+}
+
+combineLastLetters(nonsenseArray)
 
 //: __Problem 3__
 //:
